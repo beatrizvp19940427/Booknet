@@ -9,7 +9,7 @@ function Header(props) {
         </div>
       
         <nav className="inline-flex justify-between w-2/4">
-                <Link to="/">Categories</Link>
+                <Link to="/categories">Categories</Link>
                 <Link to="/">My Books</Link>
                 <Link to="/account">My Account</Link>
         </nav>
