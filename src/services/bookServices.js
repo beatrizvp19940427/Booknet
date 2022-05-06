@@ -1,9 +1,16 @@
 import API from './api';
 
-export function getCategories() {
+export async function getCategories() {
 
-     API.get('/category/')
-    .then(result => { console.log(result.data.result); return result.data.result })
-    .catch(error => { console.error(error); return Promise.reject(error); });
+     return await API.get('/category');
 
   }
+
+  export async function getCategory(ID) {
+
+    await API.get('/category/get-category',{
+      params: {
+        catID: ID
+      }}); 
+
+ }

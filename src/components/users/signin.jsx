@@ -47,7 +47,8 @@ function Signin() {
                         useremail,
                         gender
                     }
-                    signinUser(user);
+                    signinUser(user).then(result => { console.log(result); })
+                    .catch(error => { console.error(error); return Promise.reject(error); }); 
                     //register(username, password);
                     //alert("Your registration was successful");
                 }}

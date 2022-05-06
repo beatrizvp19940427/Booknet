@@ -12,6 +12,7 @@ function Header(props) {
                 <Link to="/categories">Categories</Link>
                 <Link to="/">My Books</Link>
                 <Link to="/account">My Account</Link>
+                <Link to="/settings">Settings</Link>
         </nav>
 
         <div className="w-1/4 inline-flex justify-end">

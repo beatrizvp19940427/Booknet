@@ -1,12 +1,19 @@
 import API from './api';
 
-export function signinUser({user}) {
+export async function signinUser({user}) {
 
-    API.post('account/register',{user})
-      .then(() => {
-        alert("The registration was succesful");
-
-      });
+  await API.get('/account/register',{
+    params: {
+      user: user
+    }}); 
   }
+
+  export async function loginUser({user}) {
+
+    await API.get('/account/login',{
+      params: {
+        user: user
+      }}); 
+    }
 
   
